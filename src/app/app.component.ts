@@ -1,14 +1,29 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterOutlet, CommonModule,RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'org';
+export class AppComponent implements OnInit {
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+  }
+
+  login(){
+    this.router.navigateByUrl('/');
+  }
+
+  register(){
+    this.router.navigateByUrl('/information/student');
+  }
+  details(){
+    this.router.navigateByUrl('/information/studentdetails');
+  }
+
 }

@@ -1,0 +1,48 @@
+<h2>Student Registration Form</h2>
+
+<div [formGroup]="studentDetails">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+  <br>
+  <div>
+    <label for="roll-number">
+      Roll number
+    </label>
+    <input id="rollnumber" type="number" formControlName="rollNumber">
+  </div>
+  <br>
+  <div>
+    <label for="father's name">
+      Father's name
+    </label>
+    <input id="fathername" type="text" formControlName="fatherName">
+  </div>
+  <br>
+  <div>
+    <label for=" Mother's name">
+      Mother's name
+    </label>
+    <input id="mothername" type="text" formControlName="motherName">
+  </div>
+  <br>
+  <div>
+    <label for=" contact number">
+      Contact number
+    </label>
+    <input id="contact" type="number" formControlName="contact">
+  </div>
+  <br>
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+  <br>
+</div>
+
+<button class="button" type="submit" (click)="onSubmit()"> Submit</button>
